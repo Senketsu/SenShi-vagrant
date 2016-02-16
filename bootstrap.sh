@@ -7,7 +7,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S mariadb mariadb-clients libmariadbclient --needed --noconfirm
 sudo pacman -S icecast libshout taglib --needed --noconfirm
 sudo pacman -S nim nimble git --needed --noconfirm
-nimble refresh
+nimble update
 nimble install ndbex -y
 echo "--# 2 / 3 #-- Setting up enviroment"
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
