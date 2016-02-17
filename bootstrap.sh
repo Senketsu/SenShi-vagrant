@@ -7,8 +7,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S mariadb mariadb-clients libmariadbclient --needed --noconfirm
 sudo pacman -S icecast libshout taglib --needed --noconfirm
 sudo pacman -S nim nimble git --needed --noconfirm
-nimble update
-nimble install ndbex -y
+nimble update -y
 echo "--# 2 / 3 #-- Setting up enviroment"
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # @ Recommended to change passwords in config located @ '/etc/icecast.xml'    @
@@ -46,6 +45,7 @@ mysqladmin -u root -h archbox password 'changeme'
 # sudo systemctl enable httpd.service
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo "--# 3 / 3 #-- Preparing SenShi"
+nimble install ndbex -y
 cd /vagrant
 git clone https://github.com/Senketsu/SenShi
 cd SenShi/src

@@ -54,4 +54,9 @@ exit
 * Either use *nano* - `nano ~/Senshi/conf/Manager_DB.ini`
 * Or simply remove the config and run SenShi (`rm ~/Senshi/conf/Manager_DB.ini`)
 
-
+### Known Issues:
+---------------------
+**1st time Re-compiling SenShi `Error: cannot open 'ndbex/db_mysql_ex'`**
+* After provisioning, if you try to recompile SenShi, **nimble**'s package *ndbex* is missing. (whole nimble folder)
+* You need to manualy reinstall it with `nimble install ndbex`
+*At this moment, no idea why this happens*
